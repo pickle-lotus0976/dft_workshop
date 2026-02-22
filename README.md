@@ -70,7 +70,7 @@ The critical path delay is approximately 2.8 ns at the SS corner (2.0 ns period 
 
 2. **Revert synthesis strategy to AREA 0.** Once timing closes cleanly with the pipelined MISR, confirm power returns to ~104 uW and IR drop returns to ~0.22 mV.
 
-3. **Tighten the clock incrementally.** Step down from 2.0 ns toward 1.0 ns in stages (2.0 → 1.5 → 1.2 → 1.0 ns), verifying clean signoff at all corners at each step before proceeding.
+3. **Tighten the clock incrementally.** Step down from 2.0 ns toward 1.0 ns in stages, verifying clean signoff at all corners at each step before proceeding.
 
 4. **Optimize the floorplan.** Shrink the die area to bring core utilization to 60-70%, which reduces wirelength and improves timing at tighter clock periods.
 
