@@ -4,8 +4,8 @@ A simple BIST enabled register designed and implemented through a full RTL-to-GD
 
 ---
 
-![Architecture](/dft_workshop/docs/Architecture.png)
-![GDSII Layout](/dft_workshop/docs/BIST.png)
+![Architecture](docs/Architecture.png)
+![GDSII Layout](docs/BIST.png)
 
 ---
 
