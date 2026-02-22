@@ -1,4 +1,4 @@
-# bist_top -- Built-In Self-Test ASIC
+# DFT Workshop
 
 A simple BIST enabled register designed and implemented through a full RTL-to-GDSII flow using OpenLane 2 on the SkyWater SKY130 PDK. Built as a learning exercise in digital ASIC design and DFT concepts.
 
