@@ -4,7 +4,12 @@ A simple BIST enabled register designed and implemented through a full RTL-to-GD
 
 ---
 
+## Detailed Netlist (Viavdo)
 ![Architecture](docs/Architecture.png)
+
+---
+
+## GSDII Layout
 ![GDSII Layout](docs/BIST.png)
 
 ---
