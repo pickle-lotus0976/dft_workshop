@@ -62,31 +62,13 @@ Worst IR drop on VPWR: 2.44 mV.
 
 ## Known Issues
 
-**SS corner setup violations (active).** The MISR combinational path is too long to meet timing at the SS corner (100C, 1.60V). The reg-to-reg worst slack is -0.684 ns at this corner. The fix is to pipeline the MISR across two clock cycles to halve the combinational depth. This is currently in progress.
+**SS corner setup violations (active).** This is currently in progress.
 
-**Elevated power consumption (active).** Switching to SYNTH_STRATEGY DELAY 3 caused an 18x increase in power (from ~104 uW to ~2 mW) with no improvement in timing. The strategy will be reverted to AREA 0 once the MISR pipelining is complete and timing is re-evaluated.
+**Elevated power consumption (active).** Switching to SYNTH_STRATEGY DELAY 3 caused an 18x increase in power (from ~104 uW to ~2 mW) with no improvement in timing, hence reverted back to AREA 0.
 
 **Low core utilization (~33%).** The die area is oversized for the current logic. Will be addressed after timing closure.
 
 **Three lint warnings.** Minor RTL warnings from synthesis. Under investigation.
-
----
-
-## Roadmap: Targeting 1 GHz
-
-The critical path delay is approximately 2.8 ns at the SS corner (2.0 ns period + 0.8 ns violation), which puts the current Fmax at around 350 MHz at worst case. The goal is 1 GHz (1.0 ns clock period). Steps in order:
-
-1. **Pipeline the MISR.** Insert an intermediate register stage inside the MISR to break the XOR feedback path across two clock cycles. This is the primary fix for the SS corner violations and the single most important step toward higher frequency.
-
-2. **Revert synthesis strategy to AREA 0.** Once timing closes cleanly with the pipelined MISR, confirm power returns to ~104 uW and IR drop returns to ~0.22 mV.
-
-3. **Tighten the clock incrementally.** Step down from 2.0 ns toward 1.0 ns in stages, verifying clean signoff at all corners at each step before proceeding.
-
-4. **Optimize the floorplan.** Shrink the die area to bring core utilization to 60-70%, which reduces wirelength and improves timing at tighter clock periods.
-
-5. **Close timing at 1.0 ns.** Final signoff with zero violations across all PVT corners.
-
----
 
 ## References
 
