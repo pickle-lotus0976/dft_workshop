@@ -2,9 +2,11 @@
 
 A simple BIST enabled register designed and implemented through a full RTL-to-GDSII flow using OpenLane 2 on the SkyWater SKY130 PDK. Built as a learning exercise in digital ASIC design and DFT concepts.
 
+---
 
-![Architecture](~/asic_workspace/projects/dft_workshop/docs/Architecture.png)
-![GDSII Layout](~/asic_workspace/projects/dft_workshop/docs/BIST.png)
+![Architecture](/dft_workshop/docs/Architecture.png)
+![GDSII Layout](/dft_workshop/docs/BIST.png)
+
 ---
 
 ## Physical Specifications
